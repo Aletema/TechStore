@@ -1,0 +1,86 @@
+/* === HEADER ESTILO BASE === */
+header {
+    background: #1e3c72; /* Azul oscuro */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo y título */
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* === MENU DESKTOP === */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ffcc00;
+    color: black;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+
+/* === MENÚ BURGER PARA MÓVILES === */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #1e3c72;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}

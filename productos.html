@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store - Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section id="productos">
+        <h2>📦 Nuestros Productos</h2>
+        <div class="grid" id="productos-container"></div>
+    </section>
+
+    <section id="carrito">
+        <h2>🛒 Carrito</h2>
+        <ul id="cart-list"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button id="checkout">Finalizar Compra</button>
+    </section>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header-container").innerHTML = html;
+                iniciarMenu(); // Llama la función después de cargar el header
+            });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

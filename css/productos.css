@@ -1,0 +1,129 @@
+/* === Sección de Productos === */
+#productos {
+    text-align: center;
+    padding: 20px;
+}
+
+#productos h2 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+/* === Contenedor de productos en grid === */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* === Estilo de cada producto === */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.card button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #e6b800;
+}
+
+/* === Carrito Fijo en la Esquina Superior Derecha === */
+#carrito {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    z-index: 100;
+}
+
+#carrito h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #1e3c72;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-list li {
+    padding: 5px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #ff6600;
+}
+
+#checkout {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#checkout:hover {
+    background: #cc5200;
+}
+
+/* === Diseño Responsive === */
+@media (max-width: 768px) {
+    #carrito {
+        position: relative;
+        width: 100%;
+        margin: 20px auto;
+        top: unset;
+        right: unset;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
